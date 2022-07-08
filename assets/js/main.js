@@ -6,7 +6,7 @@ function modeToggle() {
 
 let pageBody = document.body;
 let modeSwitch = document.querySelector('#mode-switch')
-let modeIcons = ['assets/images/moon.png','assets/images/sun-64.png']
+let modeIcons = ['assets/images/mode/moon.png','assets/images/mode/sun-64.png']
 let counter = 0
 
 modeSwitch.addEventListener('click', modeToggle )
