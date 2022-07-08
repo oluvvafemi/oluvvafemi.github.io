@@ -4,6 +4,7 @@ body {
   height: 100vh;
   margin: 0;
   color: #334E68;
+  background-color: #F0F4F8;
 }
 
 body, input, textarea, button {
