@@ -1,10 +1,38 @@
+---
+---
+
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
+      {% endfor %}
+    {% endif %}
+    <script src="./assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {{ content }}
+    <div class="container">
+      <div class="home-header">
+        <ul>
+          <li><a href="">blog</a></li>
+          <li><a href="">projects</a></li>
+          <li><a href="">about</a></li>
+        </ul>
+        <img src="assets/images/moon.png" id="mode-switch">
+      </div>
+      {{ content }}
+    </div>
+    <footer class="footer">
+      &copy; Chris Oluwafemi Adebiyi
+    </footer>
   </body>
 </html>
