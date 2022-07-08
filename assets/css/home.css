@@ -1,0 +1,184 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  color: #334E68;
+}
+
+body, input, textarea, button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #102A43;
+ }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  flex: 1 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#mode-switch {
+  /* content: url("../images/moon.png"); */
+  width: 30px;
+  height: 30px;
+}
+
+.home-info-container {
+  border-top: 1px solid;
+  padding-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.divider {
+  border: 4px solid;
+  width: 70px;
+}
+
+.home-info-container > .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > .name {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #243B53;
+}
+
+.info > .description {
+  margin-bottom: 20px;
+}
+
+.info > .links {
+  margin-bottom: 60px;
+}
+
+a#contact-me {
+  border-radius: 20px;
+  border: none;
+  padding: 10px 14px;
+  background-color: #102A43;
+  color: white;
+  text-decoration: none;
+  font-size: small;
+  font-weight: bolder;
+}
+
+#avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.social-icons {
+  width: 20px;
+  opacity: 0.5;
+}
+
+.info > .links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 10px;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+
+body.dark-mode {
+  background-color: #243B53;
+  color: #D9E2EC;
+}
+
+body.dark-mode a#contact-me {
+  background-color: #F0F4F8;
+  color: black;
+}
+
+body.dark-mode a {
+  color: #D9E2EC;
+}
+
+body.dark-mode .links a img{
+  filter: brightness(.8) contrast(1.2);
+  opacity: 1;
+}
+
+body.dark-mode .info > .name {
+  color: #F0F4F8;
+}
+/* #mode-switch .dark-mode {
+  content: url("../images/sun.png");
+} */
+
+@media  (max-width:600px) {
+  .container {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .home-info-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media  (min-width:600px) {
+  body {
+    font-size: calc(16px + 1vw);
+    line-height: calc(1.1em + 0.5vw);
+    align-items: center;
+  }
+  .divider {
+    width: calc(70px + 2vw);
+  }
+  #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width:50em){
+  body {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .divider {
+    width: 90px;
+  }
+}
