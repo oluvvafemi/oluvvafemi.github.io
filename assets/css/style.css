@@ -45,6 +45,10 @@ ul {
   width: 85vw;
 }
 
+.nav-links {
+  opacity: 0.6;
+}
+
 #mode-switch {
   width: 30px;
   height: 30px;
