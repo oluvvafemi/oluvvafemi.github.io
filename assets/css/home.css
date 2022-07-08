@@ -1,14 +1,10 @@
 
 .home-info-container {
-  border-top: 1px solid;
   padding-top: 40px;
   display: flex;
   gap: 20px;
-}
-
-.divider {
-  border: 4px solid;
-  width: 70px;
+  width: 85vw;
+  justify-content: space-between;
 }
 
 .home-info-container > .info {
@@ -71,9 +67,6 @@ body.dark-mode .links a img{
 body.dark-mode .info > .name {
   color: #F0F4F8;
 }
-/* #mode-switch .dark-mode {
-  content: url("../images/sun.png");
-} */
 
 @media  (max-width:600px) {
   .home-info-container {
@@ -85,6 +78,9 @@ body.dark-mode .info > .name {
     flex-direction: column;
     align-items: center;
   }
+  .info > .description {
+    text-align: center;
+  }
 }
 
 @media  (min-width:600px) {
@@ -92,6 +88,12 @@ body.dark-mode .info > .name {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+  }
+}
+
+@media (min-width:80em){
+  .home-info-container {
+    width: 800px;
   }
 }
 

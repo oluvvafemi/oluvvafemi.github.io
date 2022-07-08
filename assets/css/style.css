@@ -18,7 +18,8 @@ a {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  align-items: center;
   padding-top: 80px;
   padding-left: 80px;
   padding-right: 80px;
@@ -34,16 +35,17 @@ ul {
   gap: 20px;
 }
 
-.home-header {
+.header {
   margin-bottom: 20px;
+  border-bottom: 1px solid;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 85vw;
 }
 
 #mode-switch {
-  /* content: url("../images/moon.png"); */
   width: 30px;
   height: 30px;
 }
@@ -73,20 +75,23 @@ body.dark-mode a {
   }
 }
 
-@media  (min-width:600px) {
+/* @media  (min-width:600px) {
   body {
     font-size: calc(16px + 1vw);
     line-height: calc(1.1em + 0.5vw);
     align-items: center;
   }
-}
+} */
 
-@media (min-width:50em){
+@media (min-width:30em){
   body {
     font-size: 20px;
     line-height: 30px;
   }
-  .divider {
-    width: 90px;
+}
+
+@media (min-width:80em){
+  .header {
+    width: 800px;
   }
 }
