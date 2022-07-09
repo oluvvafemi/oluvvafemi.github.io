@@ -1,3 +1,6 @@
 - name: web
+  link: /web
 - name: ml
+  link: /ml
 - name: non-tech
+  link: /non

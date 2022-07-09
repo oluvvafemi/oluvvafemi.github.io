@@ -8,7 +8,17 @@ layout: default
     <h3>latest {{page.category}} posts</h3>
     <div class="posts-categories">
       {% for category in site.data.categories %}
-        <a>{{category.name}}</a>
+        <a href="{{category.link}}"
+          {% if category.name == page.category %}
+            style="border-radius: .9rem; 
+            background-color: #CB6E17; 
+            text-decoration: none;
+            color: #F0F4F8;
+            padding: .1rem .4rem;"
+          {% endif %}
+        >
+          {{category.name}}
+        </a>
       {% endfor %}
     </div>
   </div>
@@ -29,63 +39,3 @@ layout: default
 
 
 {{content}}
-
-<!-- <style>
-  .posts-container {
-  width: 85vw;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.posts-container h3, .post-card h3, .post-card p {
-  margin: 0;
-  padding: 0;
-}
-
-.posts-categories {
-  display: flex;
-  gap: 20px;
-  opacity: .7;
-  font-size: .9em;
-}
-
-.posts-categories a {
- text-decoration: underline;
- color:  #CB6E17;;
-}
-
-.post-card .date {
-  font-size: .8rem;
-  /* margin-top: .2em; */
-}
-
-.post-card .head {
-  /* display: flex;
-  flex-direction: column; */
-  line-height: c20px;
-}
-
-.post-card .body {
-  margin-top: 20px;
-}
-
-.post-cards {
-  display: flex;
-  flex-direction: column;
-  /* gap: 5vh; */
-}
-
-.post-card {
-  box-shadow: 0 4px 8px -8px #888888; 
-  padding-bottom:30px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-@media (min-width:80em){
-  .posts-container {
-    width: 800px;
-  }
-}
-</style> -->
