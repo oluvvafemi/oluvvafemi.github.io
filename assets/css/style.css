@@ -81,6 +81,19 @@ body.dark-mode a {
   width: 85vw;
 }
 
+.post-head {
+  display: flex;
+  flex-direction: column;
+}
+.post-head h3 {
+  margin: 0;
+}
+.post-head p {
+  font-size: .75em;
+  color: #CB6E17;
+  margin: 0;
+}
+
 @media  (max-width:600px) {
   .container {
     padding-top: 20px;
