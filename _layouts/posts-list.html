@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+
+<div class="posts-container">
+  <div>
+    <h3>latest {{page.category}} posts</h3>
+    <div class="posts-categories">
+      {% for category in site.data.categories %}
+        <a>{{category.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div>
+    <ul class="post-cards">
+      {% for post in site.posts %}
+        <li class="post-card">
+          <div class="head">
+            <h3 class="title"><a href="{{ post.url }}">{{ post.title | downcase}}</a></h3>
+            <div class="date">{{post.date | date_to_string}}</div>
+          </div>
+          <div class="body">{{ post.excerpt }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+{{content}}
+
+<!-- <style>
+  .posts-container {
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.posts-container h3, .post-card h3, .post-card p {
+  margin: 0;
+  padding: 0;
+}
+
+.posts-categories {
+  display: flex;
+  gap: 20px;
+  opacity: .7;
+  font-size: .9em;
+}
+
+.posts-categories a {
+ text-decoration: underline;
+ color:  #CB6E17;;
+}
+
+.post-card .date {
+  font-size: .8rem;
+  /* margin-top: .2em; */
+}
+
+.post-card .head {
+  /* display: flex;
+  flex-direction: column; */
+  line-height: c20px;
+}
+
+.post-card .body {
+  margin-top: 20px;
+}
+
+.post-cards {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5vh; */
+}
+
+.post-card {
+  box-shadow: 0 4px 8px -8px #888888; 
+  padding-bottom:30px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+@media (min-width:80em){
+  .posts-container {
+    width: 800px;
+  }
+}
+</style> -->
