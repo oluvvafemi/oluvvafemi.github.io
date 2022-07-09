@@ -10,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
       {% endfor %}
     {% endif %}
-    <script src="./assets/js/main.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
   </head>
   <body>
