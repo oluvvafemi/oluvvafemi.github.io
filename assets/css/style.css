@@ -77,6 +77,10 @@ body.dark-mode a {
   --text-color: #D9E2EC;
 }
 
+.post-container {
+  width: 85vw;
+}
+
 @media  (max-width:600px) {
   .container {
     padding-top: 20px;
@@ -102,6 +106,9 @@ body.dark-mode a {
 
 @media (min-width:80em){
   .header {
+    width: 800px;
+  }
+  .post-container {
     width: 800px;
   }
 }
