@@ -3,9 +3,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  /* color: #334E68; */
   --text-color: #334E68;
-  /* background-color: #F0F4F8; */
   --bkg-color: #F0F4F8;
 }
 
@@ -15,13 +13,11 @@ body, input, textarea, button {
 
 a {
   text-decoration: none;
-  /* color: #102A43; */
   --text-color: #102A43;
  }
 .container {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   align-items: center;
   padding-top: 80px;
   padding-left: 80px;
@@ -44,7 +40,7 @@ ul {
   padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:baseline;
   width: 85vw;
 }
 
@@ -53,8 +49,15 @@ ul {
 }
 
 #mode-switch {
-  width: 30px;
-  height: 30px;
+  font-size: .7em;
+  text-decoration: underline;
+  color: #CB6E17;
+  align-self: flex-end;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer {
@@ -66,14 +69,11 @@ ul {
 }
 
 body.dark-mode {
-  /* background-color: #243B53; */
   --bkg-color: #243B53;
-  /* color: #D9E2EC; */
   --text-color: #D9E2EC;
 }
 
 body.dark-mode a {
-  /* color: #D9E2EC; */
   --text-color: #D9E2EC;
 }
 
@@ -108,20 +108,16 @@ body.dark-mode a {
 
 @media (prefers-color-scheme: dark) {
   body {
-    /* background-color: #243B53; */
     --bkg-color: #243B53;
-    /* color: #D9E2EC; */
     --text-color: #D9E2EC;
   }
   
   body a {
-    /* color: #D9E2EC; */
     --text-color: #D9E2EC; 
   }
 
   body.light-mode {
     --text-color: #334E68;
-    /* background-color: #F0F4F8; */
     --bkg-color: #F0F4F8;
   }
 
