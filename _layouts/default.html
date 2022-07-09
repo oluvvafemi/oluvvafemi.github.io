@@ -25,12 +25,8 @@
         <ul>
           {% for item in site.data.navigation %}
             <li>
-              {% assign full_link = '/' %}
-              {% unless item.link == '/' %}
-                {% assign full_link = item.link | append: '.html' %}
-              {% endunless %}
               <a href="{{item.link}}" class="nav-links" id="{{item.name}}"
-                {% if page.url == full_link %}style="font-weight: bolder; opacity: 1; box-shadow: 0 4px 2px -2px #888888; padding-bottom:2px;"{% endif %}
+                {% if page.url == item.link %}style="font-weight: bolder; opacity: 1; box-shadow: 0 4px 2px -2px #888888; padding-bottom:2px;"{% endif %}
               >
                 {{item.name}}
               </a>
