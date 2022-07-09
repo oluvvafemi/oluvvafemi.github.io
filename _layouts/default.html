@@ -26,7 +26,12 @@
           {% for item in site.data.navigation %}
             <li>
               <a href="{{item.link}}" class="nav-links" id="{{item.name}}"
-                {% if page.url == item.link %}style="font-weight: bolder; opacity: 1; box-shadow: 0 4px 2px -2px #888888; padding-bottom:2px;"{% endif %}
+                {% assign current = page.url | split: '/' %}
+                {% if item.link == '/' and page.url == '/' %}
+                  style="font-weight: bolder; opacity: 1; box-shadow: 0 4px 2px -2px #888888; padding-bottom:2px;"
+                {% elsif item.link contains current[1] %}
+                    style="font-weight: bolder; opacity: 1; box-shadow: 0 4px 2px -2px #888888; padding-bottom:2px;"
+                {% endif %}
               >
                 {{item.name}}
               </a>
