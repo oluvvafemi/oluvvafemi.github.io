@@ -5,14 +5,25 @@ custom_css: blog-list
 ---
 
 <div class="posts-container">
-  <h1>Latest Posts</h1>
-  
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <h3>latest posts</h3>
+    <div class="posts-categories">
+      {% for category in site.data.categories %}
+        <a>{{category.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div>
+    <ul class="post-cards">
+      {% for post in site.posts %}
+        <li class="post-card">
+          <div class="head">
+            <h3 class="title"><a href="{{ post.url }}">{{ post.title | downcase}}</a></h3>
+            <div class="date">{{post.date | date_to_string}}</div>
+          </div>
+          <div class="body">{{ post.excerpt }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
