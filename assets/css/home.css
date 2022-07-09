@@ -15,7 +15,7 @@
 .info > .name {
   margin-bottom: 10px;
   font-weight: bold;
-  color: #243B53;
+  --text-color: #243B53;
 }
 
 .info > .description {
@@ -30,8 +30,8 @@ a#contact-me {
   border-radius: 20px;
   border: none;
   padding: 10px 14px;
-  background-color: #102A43;
-  color: white;
+  --bkg-color: #102A43;
+  --text-color: white;
   text-decoration: none;
   font-size: small;
   font-weight: bolder;
@@ -59,7 +59,7 @@ body.dark-mode a#contact-me {
   color: black;
 }
 
-body.dark-mode .links a img{
+body.dark-mode .social-icons{
   filter: brightness(.8) contrast(1.2);
   opacity: 1;
 }
@@ -97,3 +97,40 @@ body.dark-mode .info > .name {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  body a#contact-me {
+    --bkg-color: #F0F4F8;
+    --text-color: black;
+  }
+
+  body .social-icons{
+    filter: brightness(.8) contrast(1.2);
+    opacity: 1;
+  }
+
+  body .info > .name {
+    --text-color: #F0F4F8;
+  }
+
+  body.light-mode a#contact-me {
+    --bkg-color: #102A43;
+    --text-color: white;
+  }
+
+  body.light-mode .info > .name {
+    --text-color: #243B53;
+  }
+  body.light-mode .social-icons{
+    /* filter: brightness(.8) contrast(1.2); */
+    opacity: 0.5;
+  }
+}
+
+a#contact-me {
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+}
+
+.info > .name {
+  color: var(--text-color);
+}

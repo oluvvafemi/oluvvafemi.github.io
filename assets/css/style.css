@@ -3,8 +3,10 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  color: #334E68;
-  background-color: #F0F4F8;
+  /* color: #334E68; */
+  --text-color: #334E68;
+  /* background-color: #F0F4F8; */
+  --bkg-color: #F0F4F8;
 }
 
 body, input, textarea, button {
@@ -13,7 +15,8 @@ body, input, textarea, button {
 
 a {
   text-decoration: none;
-  color: #102A43;
+  /* color: #102A43; */
+  --text-color: #102A43;
  }
 .container {
   display: flex;
@@ -63,12 +66,15 @@ ul {
 }
 
 body.dark-mode {
-  background-color: #243B53;
-  color: #D9E2EC;
+  /* background-color: #243B53; */
+  --bkg-color: #243B53;
+  /* color: #D9E2EC; */
+  --text-color: #D9E2EC;
 }
 
 body.dark-mode a {
-  color: #D9E2EC;
+  /* color: #D9E2EC; */
+  --text-color: #D9E2EC;
 }
 
 @media  (max-width:600px) {
@@ -98,4 +104,37 @@ body.dark-mode a {
   .header {
     width: 800px;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    /* background-color: #243B53; */
+    --bkg-color: #243B53;
+    /* color: #D9E2EC; */
+    --text-color: #D9E2EC;
+  }
+  
+  body a {
+    /* color: #D9E2EC; */
+    --text-color: #D9E2EC; 
+  }
+
+  body.light-mode {
+    --text-color: #334E68;
+    /* background-color: #F0F4F8; */
+    --bkg-color: #F0F4F8;
+  }
+
+  body.light-mode a{
+    --text-color: #102A43;
+   }
+}
+
+body {
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+}
+
+body a {
+  color: var(--text-color);
 }
