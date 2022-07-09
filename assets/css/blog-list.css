@@ -1,0 +1,9 @@
+.posts-container {
+  width: 85vw;
+}
+
+@media (min-width:80em){
+  .posts-container {
+    width: 800px;
+  }
+}
