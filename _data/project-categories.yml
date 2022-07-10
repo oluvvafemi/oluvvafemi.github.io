@@ -1,0 +1,6 @@
+- name: web
+  link: /projects/web
+- name: ml
+  link: /projects/ml
+- name: non-tech
+  link: /projects/non-tech

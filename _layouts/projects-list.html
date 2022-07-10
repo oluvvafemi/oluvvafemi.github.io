@@ -3,11 +3,11 @@ layout: default
 ---
 
 
-<div class="posts-container">
+<div class="projects-container">
   <div>
-    <h3>latest {{page.category}} posts</h3>
-    <div class="posts-categories">
-      {% for category in site.data.categories %}
+    <h3>latest projects</h3>
+    <div class="project-categories">
+      {% for category in site.data.project-categories %}
         <a href="{{category.link}}"
           {% if category.name == page.category %}
             style="border-radius: .9rem; 
@@ -23,15 +23,18 @@ layout: default
     </div>
   </div>
   <div>
-    <ul class="post-cards">
+    <ul class="project-cards">
       {% for post in site.categories[page.category] %}
-        {% if post.url contains 'blog' and post.url contains page.category%}
-            <li class="post-card">
+        {% if post.url contains 'project' and post.url contains page.category%}
+            <li class="project-card">
               <div class="head">
                 <h3 class="title"><a href="{{ post.url }}">{{ post.title | downcase}}</a></h3>
-                <div class="date">{{post.date | date_to_string}}</div>
+                <div class="description">{{post.excerpt}}</div>
               </div>
-              <div class="body">{{ post.excerpt }}</div>
+              <div class="body">
+                <div><a href="{{post.preview_link}}" target="_blank">Preview</a></div>
+                <div><a href="{{post.code_link}}" target="_blank">Code</a></div>
+              </div>
             </li>
         {% endif %}
       {% endfor %}
