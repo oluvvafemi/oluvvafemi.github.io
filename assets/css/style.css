@@ -67,7 +67,9 @@ ul {
   display: flex;
   justify-content: center;
 }
-
+.footer a {
+  text-decoration: underline;
+}
 body.dark-mode {
   --bkg-color: #243B53;
   --text-color: #D9E2EC;
