@@ -28,7 +28,7 @@ layout: default
         {% if post.url contains 'project' and post.url contains page.category%}
             <li class="project-card">
               <div class="head">
-                <h3 class="title"><a href="{{ post.url }}">{{ post.title | downcase}}</a></h3>
+                <h3 class="title">{{ post.title | downcase}}</h3>
               </div>
               <div class="body">
                 <div class="description">{{post.excerpt}}</div>
