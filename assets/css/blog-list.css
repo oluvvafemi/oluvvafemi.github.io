@@ -19,14 +19,12 @@
 }
 
 .posts-categories a {
- /* text-decoration: underline; */
- color:  #CB6E17;;
- margin: 5px;
+ color:  #CB6E17;
+ margin-top: 5px;
 }
 
 .post-card .date {
   font-size: .8rem;
-  /* margin-top: .2em; */
 }
 
 
@@ -37,7 +35,6 @@
 .post-cards {
   display: flex;
   flex-direction: column;
-  /* gap: 5vh; */
 }
 
 .post-card {
