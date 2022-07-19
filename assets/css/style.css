@@ -11,6 +11,16 @@ body, input, textarea, button {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.post-container a {
+  text-decoration: underline;
+}
+
+.post-container code {
+  border: none;
+  box-shadow: 0 1px 4px inset;
+  padding: 2px;
+}
+
 a {
   text-decoration: none;
   --text-color: #102A43;
