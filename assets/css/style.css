@@ -46,7 +46,7 @@ a {
   flex: 1 0 auto;
 }
 
-ul {
+.header ul, .projects-container ul, .posts-container ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
