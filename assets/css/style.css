@@ -23,7 +23,14 @@ body, input, textarea, button {
   border-radius: 10px;
   max-width: 100%;
   overflow: scroll;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  vertical-align: top;
 }
+
+.post-container code::-webkit-scrollbar { 
+  display: none; 
+} 
 
 a {
   text-decoration: none;
