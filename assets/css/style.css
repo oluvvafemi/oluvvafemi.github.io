@@ -32,6 +32,10 @@ body, input, textarea, button {
   display: none; 
 } 
 
+.post-container img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
   --text-color: #102A43;

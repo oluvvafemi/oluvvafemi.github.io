@@ -5,6 +5,9 @@ title: Building a monolithic weather app with Rails from UI design to deployment
 
 I recently started my foray into full-stack web development, and during the course of the past three months I've learnt that the web runs on forms and that modern Javascript is a joy to write but you still need a combination of different build tools. I've also seen quite a lot of assertions that Ruby on Rails is dead, however I find the coding by convention philosophy of Rails appealing. For a beginner, it helps you adhere to standard practices and quickly prototype ideas. 
 
+![screenshots]({{ site.baseurl }}/assets/images/weather-app/screenshots.png)
+
+
 The motivation for building the weather app was to put everything I've learnt into practice from UI design to deployment. You can find the code [here](https://github.com/oluvvafemi/weather-app) and the live app [here](https://weather.chrisadebiyi.com/).
 
 ### UI design
