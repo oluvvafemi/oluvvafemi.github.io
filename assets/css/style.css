@@ -107,6 +107,7 @@ body.dark-mode a {
 .post-head {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 .post-head h3 {
   margin: 0;
