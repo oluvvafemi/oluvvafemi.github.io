@@ -47,7 +47,7 @@ ERB is the default views template in Rails. It is very verbose and can be diffic
 ### Services
 It is possible to put all functions inside the controller, but a better pattern is to create Rails service objects to handle api calls and other specialized functions. They make the controller cleaner and can be reused by other controllers too, keeping your code DRY. Service objects are simply Ruby objects designed to perform a single action. For example, in this project the functions to get and process the weather data from OpenWeatherMap API and the image data from Unsplash are abstracted into separate services - WeatherService and PhotoService. 
 
-WeatherService returns a Ruby hash with only the relevant data and PhotoService returns the image url with specific dimensions for a given locations.
+WeatherService returns a Ruby hash with only the relevant data and PhotoService returns the image url with specific dimensions for a given location.
 
 ### Environment variables and Config files
 There are different ways to store credentials and configurations in Rails. 
@@ -57,7 +57,7 @@ One way is to use Rails credentials which are stored and encrypted in `config/cr
 Another way is to simply use environment variables for everything. This is recommended if you would like to deploy with a PaaS like Digital Ocean's App Platform. With this method there is no risk of accidentally pushing any key to Github, however you have to set the environment variables twice - locally and on the App Platform. 
 
 ### Deployment
-There are endless options here but for simplicity and efficiency I chose Digital Ocean's App Platform. You push your code to Github(or a repository of your choice) and it automatically builds and deploy your app. The the basic plan goes for $5/month. 
+There are endless options here but for simplicity and efficiency I chose Digital Ocean's App Platform. You push your code to Github(or a repository of your choice) and it automatically builds and deploy your app. The basic plan goes for $5/month. 
 
 If you decide to use App Platform or another PaaS, be aware that you may have to set some environment variables otherwise your Rails app won't work. The two important ones are `SECRET_KEY_BASE` and `RAILS_SERVE_STATIC_FILES`.  The value for `SECRET_KEY_BASE` can be found in `config/master.key`, while `RAILS_SERVE_STATIC_FILES` should be set to true if you used Rails default asset pipeline.
 
