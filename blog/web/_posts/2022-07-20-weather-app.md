@@ -1,6 +1,7 @@
 ﻿---
 layout: post
 title: Building a monolithic weather app with Rails from UI design to deployment
+image: "assets/images/weather-app/screenshots.png"
 ---
 
 I recently started my foray into full-stack web development, and during the course of the past three months I've learnt that the web runs on forms and that modern Javascript is a joy to write but you still need a combination of different build tools. I've also seen quite a lot of assertions that Ruby on Rails is dead, however I find the coding by convention philosophy of Rails appealing. For a beginner, it helps you adhere to standard practices and quickly prototype ideas. 

@@ -1,0 +1,19 @@
+<!-- <meta name="twitter:card" content="summary">
+<meta name=”twitter:site” content=”@oluvvafemi”> 
+<meta name=”twitter:title” content="{{page.title}}"> 
+<meta name="twitter:description" content=" ">
+<meta name="twitter:image" content="{{ page.image }}"> -->
+
+<!-- Twitter cards -->
+<meta name="twitter:site"    content="@oluvvafemi">
+<meta name="twitter:creator" content="@oluvvafemi”">
+<meta name="twitter:title"   content="{{ page.title }}">
+
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ site.baseurl }}/{{ page.image }}">
+{% else %}
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="{{ site.baseurl }}/assets/images/home/dp.jpg">
+{% endif %}
+
