@@ -1,1 +1,3 @@
-Personal website for blog and portfolio projects made and designed by me.
+Personal website for blog and portfolio projects. 
+
+Made and designed by me.
